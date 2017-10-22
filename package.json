@@ -4,7 +4,7 @@
   "description": "Tutorial do meu primeiro contato com a biblioteca react , empacotador webpack e compilador babel.",
   "main": "App.js",
   "scripts": {
-    "start": "concurrently --kill-others \"webpack -d --watch\" \"webpack-dev-server --hot --inline --progress --colors\""
+    "start": "concurrently --kill-others \"webpack -d --watch --progress\" \"webpack-dev-server --hot --inline --progress --colors\""
   },
   "repository": {
     "type": "git",

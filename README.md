@@ -18,8 +18,8 @@ A pasta raiz possui a seguinte árvore de diretório
   -package.json       (gerado via npm init)
 ```
 # 1. Create a new node package
-```npm 
-npm init 
+```npm
+npm init
 ```
   Irá gerar o arquivo package.json contendo informações do projeto.
 
@@ -49,7 +49,7 @@ npm init
  ```
   Crie o arquivo index.html na pasta public e no body imponha:
  ```javascript
-  <script src="bundle.js"></script> 
+  <script src="bundle.js"></script>
 
  ```
   Verifique se funciona iniciando o webpack via terminal
@@ -86,7 +86,7 @@ npm init
   ./node_modules/.bin/webpack-dev-server --hot --inline --progress --colors
 
   deverá aparecer algo como:
-  
+
  ```
 [1] Hash: bf45c4e7f1ef5a4ade41
 [1] Version: webpack 3.8.1
@@ -155,13 +155,13 @@ npm init
  ```
 
     Um novo arquivo bundle.js deverá ser gerado após o comando
-    
+
      ./node_modules/.bin/webpack -d --watch   
 
     Em outro terminal levante o servidor com o comando:
-     
+
       ./node_modules/.bin/webpack-dev-server --hot --inline --progress --colors   
-      
+
     Algo deveria ser renderizado na url   http://localhost:3333/
 
   # 5. Create Script Start With NPM
@@ -175,13 +175,16 @@ npm init
       "start": "concurrently --kill-others \"webpack -d --watch\" \"webpack-dev-server --hot --inline --progress --colors\""
     }
  ```
- 
+
  Dessa forma o empacotador(webpack) e o servidor (webpack-dev-server) serão iniciados simultaneamente com o comando:
- 
- ``` 
- npm start 
+
  ```
- 
+ npm start
+ ```
+
+Para parar o servidor mate o processo no terminal com ctrl + c ou kill pid
+NÃO encontrei uma maneira inteligente de parar usando um script do tipo npm stop =( 
+
 fontes:
 https://willianjusten.com.br/configurando-o-webpack-para-rodar-react-e-es6/
 http://tszekely.github.io/react-learning-module/
